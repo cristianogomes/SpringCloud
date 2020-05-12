@@ -12,8 +12,6 @@ spring:
       enabled: true
       settings:
         web-allow-others: true
-#  datasource:
-#    url: jdbc:h2:mem:testdb
 
 eureka:
   client:
@@ -21,3 +19,6 @@ eureka:
       defaultZone: http://localhost:8010/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+gateway:
+    ip: 192.168.15.11
