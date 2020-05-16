@@ -16,3 +16,12 @@ api:
       registration: /users-ws/users
       login: /users-ws/users/login
       h2console: /users-ws/h2-console/**
+
+authorization:
+  token:
+    header:
+      name: Authorization
+      prefix: Bearer
+
+token:
+  secret: 53cr37

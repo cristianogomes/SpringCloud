@@ -26,7 +26,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
             .antMatchers(environment.getProperty("api.url.path.h2console")).permitAll()
             .antMatchers(HttpMethod.POST, environment.getProperty("api.url.path.registration")).permitAll()
             .antMatchers(HttpMethod.POST, environment.getProperty("api.url.path.login")).permitAll()
-            .anyRequest().authenticated();
+            .anyRequest().authenticated()
+            .and()
+            .addFilter(new AuthorizationFilter(authenticationManager(), environment));
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
