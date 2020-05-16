@@ -1,0 +1,18 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+
+api:
+  url:
+    path:
+      registration: /users-ws/users
+      login: /users-ws/users/login
+      h2console: /users-ws/h2-console/**
