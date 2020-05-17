@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: PhotoAppApiConfigServer
+
+server:
+  port: 8012
