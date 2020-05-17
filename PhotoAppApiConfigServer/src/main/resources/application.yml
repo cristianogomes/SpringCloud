@@ -1,6 +1,14 @@
 spring:
   application:
     name: PhotoAppApiConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cristianogomes/PhotoAppConfiguration
+          username: xxx
+          password: xxx
+          clone-on-stat: true
 
 server:
   port: 8012
