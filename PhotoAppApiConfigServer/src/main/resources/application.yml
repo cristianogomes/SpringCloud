@@ -5,9 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/cristianogomes/PhotoAppConfiguration
-          username: xxx
-          password: xxx
+          uri: git@github.com:cristianogomes/PhotoAppConfiguration.git
           clone-on-stat: true
 
 server:
