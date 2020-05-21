@@ -12,6 +12,13 @@ spring:
       enabled: true
       settings:
         web-allow-others: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/photo_app?serverTimezone=UTC
+    username: photo_app_user
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
   rabbitmq:
     host: localhost
     port: 5672
