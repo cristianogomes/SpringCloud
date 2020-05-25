@@ -7,6 +7,8 @@ import com.appsdeveloperblog.photoapp.api.users.shared.UserDto;
 import com.appsdeveloperblog.photoapp.api.users.ui.model.AlbumResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.security.core.userdetails.User;
@@ -21,6 +23,8 @@ import java.util.UUID;
 
 @Service
 public class UsersServiceImpl implements UsersService {
+
+    Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private UsersRepository usersRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -83,7 +87,7 @@ public class UsersServiceImpl implements UsersService {
         List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
         */
 
-        List<AlbumResponseModel> albumsList = albumsServiceClient.getAlhums(userId);
+        List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
 
         userDto.setAlbums(albumsList);
 
