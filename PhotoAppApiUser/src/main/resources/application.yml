@@ -49,6 +49,10 @@ login:
   url:
     path: /users/login
 
+feign:
+  hystrix:
+    enabled: true
+
 logging:
   level:
     com:
