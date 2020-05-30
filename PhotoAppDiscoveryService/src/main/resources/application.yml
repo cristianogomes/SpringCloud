@@ -11,3 +11,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
+
+logging:
+  file: log/discoveryservice.log
