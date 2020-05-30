@@ -17,3 +17,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka
+
+logging:
+  file: log/account-ws.log

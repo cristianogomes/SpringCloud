@@ -16,4 +16,4 @@ eureka:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 logging:
-  file: albums-ws.log
+  file: log/albums-ws.log

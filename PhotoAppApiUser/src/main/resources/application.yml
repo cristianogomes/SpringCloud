@@ -61,6 +61,7 @@ feign:
     enabled: true
 
 logging:
+  file: log/users-ws.log
   level:
     com:
       appsdeveloperblog:

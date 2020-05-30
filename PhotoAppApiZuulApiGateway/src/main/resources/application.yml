@@ -42,3 +42,6 @@ authorization:
 
 token:
   secret: 53cr37
+
+logging:
+  file: log/zuul.log
