@@ -10,7 +10,7 @@ spring:
         native:
           search-locations: file:///${user.home}/projects/SpringCloud/PhotoAppConfigFiles
   profiles:
-    active: native
+    active: git
   rabbitmq:
     host: localhost
     port: 5672
