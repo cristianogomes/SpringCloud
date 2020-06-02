@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:cristianogomes/PhotoAppConfiguration.git
+          clone-on-stat: true
+          ignore-local-ssh-settings: true
+          private-key: ${SSH_KEY}
+        native:
+          search-locations: file:///${user.home}/projects/SpringCloud/PhotoAppConfigFiles
