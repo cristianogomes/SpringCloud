@@ -9,3 +9,5 @@ spring:
           private-key: ${SSH_KEY}
         native:
           search-locations: file:///${user.home}/projects/SpringCloud/PhotoAppConfigFiles
+  profiles:
+    active: git
