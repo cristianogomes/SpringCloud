@@ -48,6 +48,12 @@ eureka:
 gateway:
     ip: 192.168.15.11
 
+authorization:
+  token:
+    header:
+      name: Authorization
+      prefix: Bearer
+
 token:
   expiration_time: 864000000 #10 days
   secret: 53cr37

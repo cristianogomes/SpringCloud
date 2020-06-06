@@ -10,8 +10,8 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -45,6 +45,8 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(returnValue);
     }
 
+//    @PreAuthorize("principal == #userId")
+    @PostAuthorize("principal == returnObject.body.userId")
     @GetMapping("/{userId}")
     public ResponseEntity<UserResponseModel> getUser(@PathVariable("userId") String userId) {
         UserDto userDto = usersService.getUserByUserId(userId);
